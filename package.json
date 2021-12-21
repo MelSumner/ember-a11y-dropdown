@@ -1,13 +1,13 @@
 {
   "name": "ember-a11y-dropdown",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "An accessible dropdown that you can use in your Ember app",
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": "https://github.com/MelSumner/ember-a11y-dropdown",
   "license": "MIT",
-  "author": "",
+  "author": "Melanie Sumner <melanie.sumner@hey.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -37,6 +37,7 @@
     "@glimmer/tracking": "^1.0.4",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
+    "ember-a11y-refocus": "^2.1.0",
     "ember-auto-import": "^1.11.3",
     "ember-cli": "~3.28.4",
     "ember-cli-dependency-checker": "^3.2.0",

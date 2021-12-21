@@ -1,0 +1,34 @@
+<div class="ea-dropdown">
+  <button
+    type="button"
+    class="ea-dropdown__button"
+    {{on 'click' this.toggleShowing}}
+  >
+    {{this.buttonLabel}}
+  </button>
+  {{#if this.isShowing}}
+    {{#if @listItems}}
+      <ul class="ea-dropdown__list">
+        {{#each @listItems as |listItem|}}
+          <li class="ea-dropdown__list-item">
+            {{#if listItem.route}}
+              <LinkTo
+                @disabled={{@disabled}}
+                @route={{listItem.route}}
+                class="ea-dropdown__link"
+              >
+                {{listItem.name}}
+              </LinkTo>
+            {{else}}
+              {{listItem}}
+            {{/if}}
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <p>
+        if you see this, something went wrong.
+      </p>
+    {{/if}}
+  {{/if}}
+</div>

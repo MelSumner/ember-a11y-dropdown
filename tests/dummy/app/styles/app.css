@@ -1,0 +1,33 @@
+*, *:after {
+  box-sizing: border-box;
+}
+html, body {
+  font-size: 16px;
+  line-height: 1.2;
+}
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  border-bottom: 1px solid black;
+}
+main {
+  min-height: 90vh;
+}
+footer {
+  padding: 1em;
+  border-top: 1px solid gray;
+}
+footer p {
+  margin: 0 auto;
+  padding: 0;
+}
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
