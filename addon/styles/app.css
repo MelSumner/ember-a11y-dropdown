@@ -1,6 +1,8 @@
 .ea-dropdown {}
 
 .ea-dropdown__button {
+  background-color: white;
+  border-color: black;
   display: flex;
   padding: 1em;
   position: relative;
@@ -19,6 +21,20 @@
 
 .ea-dropdown__list-item {
   padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.ea-dropdown__list-item--text-only {
+  padding: 0.5em;
+}
+.ea-dropdown__list-item--separator {
+	list-style: none;
+	border-bottom: 1px solid gray;
+	display: flex;
+	margin: 0 0 0.5em 0;
+	max-width: 100%;
+	background-color: aliceblue;
+	padding-top: 0;
 }
 
 .ea-dropdown__link {

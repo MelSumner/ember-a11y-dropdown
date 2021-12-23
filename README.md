@@ -123,9 +123,20 @@ export default class EaHeaderDemoComponent extends Component {
       route: 'alpha',
       name: 'Alpha Page',
     },
+    {
+      type: 'separator',
+    },
+    {
+      name: 'We are happy to see you!'
+    }
   ];
 }
 ```
+
+You'll notice a few things: 
+
+* to create a separator in the list, use `type: 'separator'` - the component looks for `listitem.type` to be `separator`.
+* if you want something in the list that isn't a link, then don't define a `route` for that item, just `name`. 
 
 Contributing
 ------------------------------------------------------------------------------

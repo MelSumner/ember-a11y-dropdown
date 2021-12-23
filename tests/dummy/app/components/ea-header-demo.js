@@ -11,5 +11,11 @@ export default class EaHeaderDemoComponent extends Component {
       route: 'alpha',
       name: 'Alpha Page',
     },
+    {
+      type: 'separator',
+    },
+    {
+      name: 'Hi Melanie how are you today?',
+    }
   ];
 }

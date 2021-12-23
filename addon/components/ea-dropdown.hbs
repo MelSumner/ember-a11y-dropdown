@@ -10,8 +10,8 @@
     {{#if @listItems}}
       <ul class="ea-dropdown__list">
         {{#each @listItems as |listItem|}}
-          <li class="ea-dropdown__list-item">
             {{#if listItem.route}}
+            <li class="ea-dropdown__list-item">
               <LinkTo
                 @disabled={{@disabled}}
                 @route={{listItem.route}}
@@ -19,10 +19,12 @@
               >
                 {{listItem.name}}
               </LinkTo>
+            </li>
+            {{else if listItem.type}}
+              <li role="separator" class="ea-dropdown__list-item--separator"></li>
             {{else}}
-              {{listItem}}
+              <li class="ea-dropdown__list-item ea-dropdown__list-item--text-only">{{listItem.name}}</li>
             {{/if}}
-          </li>
         {{/each}}
       </ul>
     {{else}}
