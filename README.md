@@ -54,15 +54,8 @@ With a transparent border, users with high-contrast mode will still be able to s
 
 Basic use:
 
-The most basic use of the component requires a `listItems` array to be passed. You can do this with Ember's built-in [`array` helper](https://guides.emberjs.com/release/components/helper-functions/#toc_the-array-helper) if you want:
 
-```hbs
-<EaDropdown @listItem={{array 'one' 'two' 'three'}} />
-```
-
-This will result in a button labeled "menu" and when interacted with, will show an unordered list with the array items in a list.
-
-You can also add an array to a controller for the page where you've used the component:
+You can add an array to a controller for the page where you've used the component:
 
 For example, here's the controller in this addon's demo app:
 
@@ -75,11 +68,11 @@ export default class ApplicationController extends Controller {
   @tracked someArray = [
     {
       route: 'index',
-      name: 'one',
+      text: 'one',
     },
     {
       route: 'alpha', // actual name of route in demo app
-      name: 'two',
+      text: 'two',
     },
   ];
 }
@@ -117,17 +110,17 @@ export default class EaHeaderDemoComponent extends Component {
   @tracked listItems = [
     {
       route: 'index',
-      name: 'Home',
+      text: 'Home',
     },
     {
       route: 'alpha',
-      name: 'Alpha Page',
+      text: 'Alpha Page',
     },
     {
-      type: 'separator',
+      text: 'separator',
     },
     {
-      name: 'We are happy to see you!'
+      text: 'We are happy to see you!'
     }
   ];
 }

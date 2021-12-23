@@ -5,17 +5,17 @@ export default class EaHeaderDemoComponent extends Component {
   @tracked listItems = [
     {
       route: 'index',
-      name: 'Home',
+      text: 'Home',
     },
     {
       route: 'alpha',
-      name: 'Alpha Page',
+      text: 'Alpha Page',
     },
     {
       type: 'separator',
     },
     {
-      name: 'Hi Melanie how are you today?',
+      text: 'Hi Melanie how are you today?',
     }
   ];
 }

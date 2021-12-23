@@ -17,13 +17,13 @@
                 @route={{listItem.route}}
                 class="ea-dropdown__link"
               >
-                {{listItem.name}}
+                {{listItem.text}}
               </LinkTo>
             </li>
             {{else if listItem.type}}
               <li role="separator" class="ea-dropdown__list-item--separator"></li>
             {{else}}
-              <li class="ea-dropdown__list-item ea-dropdown__list-item--text-only">{{listItem.name}}</li>
+              <li class="ea-dropdown__list-item ea-dropdown__list-item--text-only">{{listItem.text}}</li>
             {{/if}}
         {{/each}}
       </ul>
