@@ -1,36 +1,41 @@
-<div class="ea-dropdown">
-  <button
-    type="button"
-    class="ea-dropdown__button"
-    {{on 'click' this.toggleShowing}}
-  >
-    {{this.buttonLabel}}
-  </button>
-  {{#if this.isShowing}}
-    {{#if @listItems}}
-      <ul class="ea-dropdown__list">
-        {{#each @listItems as |listItem|}}
-            {{#if listItem.route}}
-            <li class="ea-dropdown__list-item">
-              <LinkTo
-                @disabled={{@disabled}}
-                @route={{listItem.route}}
-                class="ea-dropdown__link"
-              >
-                {{listItem.text}}
-              </LinkTo>
-            </li>
-            {{else if listItem.type}}
-              <li role="separator" class="ea-dropdown__list-item--separator"></li>
-            {{else}}
-              <li class="ea-dropdown__list-item ea-dropdown__list-item--text-only">{{listItem.text}}</li>
-            {{/if}}
-        {{/each}}
-      </ul>
-    {{else}}
-      <p>
-        if you see this, something went wrong.
-      </p>
+{{!-- template-lint-disable no-invalid-interactive --}}
+<div class="ea-dropdown" {{on 'keyup' this.handleKeyUp}}> 
+  
+    <button
+      type="button"
+      class="ea-dropdown__button"
+      {{on 'click' this.toggleShowing}}
+      id="ea-dropdown-button--trigger"
+    >
+      {{this.buttonLabel}}
+    </button>
+    {{#if this.isShowing}}
+      {{#if @listItems}}
+        <ul class="ea-dropdown__list">
+          {{#each @listItems as |listItem|}}
+              {{#if listItem.route}}
+              <li class="ea-dropdown__list-item">
+                <LinkTo
+                  @disabled={{@disabled}}
+                  @route={{listItem.route}}
+                  class="ea-dropdown__link"
+                >
+                  {{listItem.text}}
+                </LinkTo>
+              </li>
+              {{else if listItem.type}}
+                <li role="separator" class="ea-dropdown__list-item--separator"></li>
+              {{else}}
+                <li class="ea-dropdown__list-item ea-dropdown__list-item--text-only">{{listItem.text}}</li>
+              {{/if}}
+          {{/each}}
+        </ul>
+      {{else}}
+        <p>
+          if you see this, something went wrong.
+        </p>
+      {{/if}}
     {{/if}}
-  {{/if}}
+  
 </div>
+{{!-- template-lint-enable no-invalid-interactive --}}

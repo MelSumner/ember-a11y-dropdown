@@ -16,6 +16,6 @@ export default class EaHeaderDemoComponent extends Component {
     },
     {
       text: 'Hi Melanie how are you today?',
-    }
+    },
   ];
 }

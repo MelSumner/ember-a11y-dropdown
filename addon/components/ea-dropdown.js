@@ -12,22 +12,32 @@ export default class EaDropdownComponent extends Component {
    * @description
    */
   get buttonLabel() {
-    return this.args.buttonLabel ?? 'Menu';
+    return this.args.buttonLabel ?? 'User Menu';
   }
 
   get listItems() {
-    return this.args.listItems ?? 'one';
+    return this.args.listItems ?? null;
   }
 
   @action
   toggleShowing() {
     this.isShowing = !this.isShowing;
   }
+
+  @action
+  handleKeyUp(event) {
+    let trigger = document.querySelector('#ea-dropdown-button--trigger');
+    let escapeKey = event.key === 'Escape' || event.keycode === 27;
+
+    if (escapeKey && this.isShowing === true) {
+      this.isShowing = false;
+      trigger.focus();
+    }
+  }
 }
 
 //TODO add comments for API
 //TODO add inert support
-//TODO add ESC key support
+//TODO add clickoutside support
 //TODO add icon support
-//TODO add separator support
 //TODO add tests
