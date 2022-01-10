@@ -12,15 +12,6 @@ module('Integration | Component | ea-dropdown', function (hooks) {
 
     await render(hbs`<EaDropdown />`);
 
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <EaDropdown>
-        template block text
-      </EaDropdown>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).hasText('User Menu');
   });
 });
