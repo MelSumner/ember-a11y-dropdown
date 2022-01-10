@@ -5,13 +5,21 @@
       type="button"
       class="ea-dropdown__button"
       {{on 'click' this.toggleShowing}}
-      id="ea-dropdown-button--trigger"
+      id={{this.buttonId}}
     >
       {{this.buttonLabel}}
     </button>
     {{#if this.isShowing}}
       {{#if @listItems}}
-        <ul class="ea-dropdown__list">
+      {{! template-lint-disable no-action }}
+        <ul class="ea-dropdown__list" {{focus-trap 
+        focusTrapOptions=(hash
+          onDeactivate=(action this.toggleShowing)
+          clickOutsideDeactivates=true
+          returnFocusOnDeactivate=true
+          initialFocus=(this.buttonId)
+        )
+          }}>
           {{#each @listItems as |listItem|}}
               {{#if listItem.route}}
               <li class="ea-dropdown__list-item">
@@ -30,6 +38,7 @@
               {{/if}}
           {{/each}}
         </ul>
+        {{! template-lint-enable no-action }}
       {{else}}
         <p>
           if you see this, something went wrong.
