@@ -1,10 +1,12 @@
 import Component from '@glimmer/component';
-// import { assert } from '@ember/debug';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
+import { guidFor } from '@ember/object/internals';
 
 export default class EaDropdownComponent extends Component {
   @tracked isShowing = false;
+
+  buttonId = 'ead-button-' + guidFor(this);
 
   /**
    * @param buttonLabel
@@ -37,7 +39,5 @@ export default class EaDropdownComponent extends Component {
 }
 
 //TODO add comments for API
-//TODO add inert support
-//TODO add clickoutside support
 //TODO add icon support
 //TODO add tests
