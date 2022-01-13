@@ -28,6 +28,7 @@
   "dependencies": {
     "ember-cli-babel": "7.26.11",
     "ember-cli-htmlbars": "6.0.1",
+    "ember-truth-helpers": "^3.0.0",
     "webpack": "5.66.0"
   },
   "devDependencies": {
@@ -67,15 +68,35 @@
     "npm-run-all": "4.1.5",
     "prettier": "2.5.1",
     "qunit": "2.17.2",
-    "qunit-dom": "2.0.0"
+    "qunit-dom": "2.0.0",
+    "release-it": "^14.2.1",
+    "release-it-lerna-changelog": "^3.1.0"
   },
   "engines": {
     "node": "12.* || 14.* || >= 16"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "ember": {
     "edition": "octane"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": false
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
   }
 }

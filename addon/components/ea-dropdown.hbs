@@ -6,8 +6,21 @@
       class="ea-dropdown__button"
       {{on 'click' this.toggleShowing}}
       id={{this.buttonId}}
+      aria-label={{if this.isIconOnly this.buttonLabel}}
     >
-      {{this.buttonLabel}}
+      {{#if this.isIconOnly}}
+        {{this.iconUrl}}
+      {{else}}
+        {{#if this.iconUrl}}
+          {{#if (eq this.iconPos 'leading')}}
+            {{this.iconUrl}} {{this.buttonLabel}}
+          {{else if (eq this.iconPos 'trailing')}}
+            {{this.buttonLabel}} {{this.iconUrl}}
+          {{/if}}
+        {{else}}
+          {{this.buttonLabel}}
+        {{/if}}
+      {{/if}}
     </button>
     {{#if this.isShowing}}
       {{#if @listItems}}
@@ -22,17 +35,21 @@
           }}>
           {{#each @listItems as |listItem|}}
               {{#if listItem.route}}
-              <li class="ea-dropdown__list-item">
-                <LinkTo
-                  @disabled={{@disabled}}
-                  @route={{listItem.route}}
-                  class="ea-dropdown__link"
-                >
-                  {{listItem.text}}
-                </LinkTo>
-              </li>
-              {{else if listItem.type}}
+                <li class="ea-dropdown__list-item">
+                  <LinkTo
+                    @disabled={{@disabled}}
+                    @route={{listItem.route}}
+                    class="ea-dropdown__link"
+                  >
+                    {{listItem.text}}
+                  </LinkTo>
+                </li>
+              {{else if (eq listItem.type 'separator')}}
                 <li role="separator" class="ea-dropdown__list-item--separator"></li>
+              {{else if (eq listItem.type 'button')}}
+                <li class="ea-dropdown__list-item">
+                  <button class="ea-dropdown__list-item--button">{{listItem.text}}</button>
+                </li>
               {{else}}
                 <li class="ea-dropdown__list-item ea-dropdown__list-item--text-only">{{listItem.text}}</li>
               {{/if}}

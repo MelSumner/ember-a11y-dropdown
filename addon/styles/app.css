@@ -36,6 +36,11 @@
 	background-color: aliceblue;
 	padding-top: 0;
 }
+.ea-dropdown__list-item--button {
+  display: flex;
+  padding: 0.5em;
+  width: 100%;
+}
 
 .ea-dropdown__link {
   padding: 0.5em;
@@ -47,8 +52,14 @@
 
 /* Lord Vader Hates Fluffy Animals */
 .ea-dropdown__link:visited {}
-.ea-dropdown__link:hover {
+
+.ea-dropdown__link:hover,
+.ea-dropdown__list-item--button:hover {
   background-color: lightblue;
+  cursor: pointer;
 }
-.ea-dropdown__link:focus {}
-.ea-dropdown__link:active {}
+.ea-dropdown__link:focus,
+.ea-dropdown__list-item--button:focus {}
+
+.ea-dropdown__link:active,
+.ea-dropdown__list-item--button:active {}
