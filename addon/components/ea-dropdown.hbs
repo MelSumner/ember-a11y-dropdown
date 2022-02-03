@@ -39,17 +39,13 @@
                   <LinkTo
                     @disabled={{@disabled}}
                     @route={{listItem.route}}
-                    class="ea-dropdown__link"
+                    class="ea-dropdown__list-item--link"
                   >
                     {{listItem.text}}
                   </LinkTo>
                 </li>
               {{else if (eq listItem.type 'separator')}}
                 <li role="separator" class="ea-dropdown__list-item--separator"></li>
-              {{else if (eq listItem.type 'button')}}
-                <li class="ea-dropdown__list-item">
-                  <button class="ea-dropdown__list-item--button">{{listItem.text}}</button>
-                </li>
               {{else}}
                 <li class="ea-dropdown__list-item ea-dropdown__list-item--text-only">{{listItem.text}}</li>
               {{/if}}

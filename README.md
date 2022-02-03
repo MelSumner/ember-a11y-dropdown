@@ -45,9 +45,11 @@ The specificity in the addon is kept at single level; it is explicitly only the 
 * the `<button>` has the class `ea-dropdown__button`
 * the `<ul>` has the class `ea-dropdown__list`
 * the `<li>` has the class `ea-dropdown__list-item`
-* the `<a>` has the class `ea-dropdown__link`
+* the `<li>` as a separator has the class `ea-dropdown__list-item--separator`
+* the `<a>` inside of the `<li>` has the class `ea-dropdown__list-item--link`
+* to style the `<li>` that contains text-only, target `ea-dropdown__list-item--text-only`
 
-Note: if you are going to override any borders or outlines, do it the accessible way! Here's what that means: outlines and border-colors need to stay transparent in _your_ code, so if a user has high-contrast mode turned on, they will be able to see the borders; in high-contrast mode, operating systems ignore all color definitions (and `transparent` is indeed considered a color). 
+Accessibility Note: if you are going to override any borders or outlines, do it the accessible way! Here's what that means: outlines and border-colors need to stay transparent in _your_ code, so if a user has high-contrast mode turned on, they will be able to see the borders; in high-contrast mode, operating systems ignore all color definitions (and `transparent` is indeed considered a color).
 
 Do this:
 
@@ -152,7 +154,7 @@ export default class EaHeaderDemoComponent extends Component {
 You'll notice a few things: 
 
 * To create a separator in the list, use `type: 'separator'` - the component looks for `listitem.type` to be `separator`.
-* If you want something in the list that isn't a link, then don't define a `route` for that item, just `text`. 
+* If you want something in the list that isn't a link, then don't define a `route` for that item, just `text`.
 
 ## Keyboard Support
 
