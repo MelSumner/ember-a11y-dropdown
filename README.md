@@ -156,11 +156,11 @@ You'll notice a few things:
 
 ## Keyboard Support
 
-* In order not to conflict with screen readers, I have not done anything fancy with the keyboard support. 
+* I have not done anything fancy with the keyboard support. 
 * If a screen reader is active and the dropdown menu is open, users will already be able to navigate with arrow keys. 
-* If a screen reader is not open, users can use the `TAB` key to navigate normally.
-* If the dropdown is open and the user presses the `ESC` key, the menu will close 
-* If focus was on an item list, focus will return to the `button` element that trigger
+* If a screen reader is not active, users can use the `TAB` key to navigate through the list.
+* If the dropdown is open and the user presses the `ESC` key, the menu will close.
+* If focus was on an item list, and the menu was closed by pressing the `ESC` key, focus will return to the `button` element trigger.
 
 ## Contributing
 
