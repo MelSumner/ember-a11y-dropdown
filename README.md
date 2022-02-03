@@ -1,7 +1,10 @@
 # ember-a11y-dropdown
 
-This is an accessible dropdown that you can use in your Ember app for a menu dropdown.
-It's pretty narrow in scope, and there are other addons that do fancier things. There might also be better ways to do it. If you feel that is the case, please feel free to file an issue or open a PR.
+**Note: this is not to replace a `<select>` element in a form.**
+
+This is an accessible dropdown that you can use in your Ember app for a menu dropdown-- or [disclosure navigation menu])https://www.w3.org/TR/wai-aria-practices-1.2/examples/disclosure/disclosure-navigation.html)
+
+It's pretty narrow in scope, and there are other addons that do fancier things. 
 
 Use this addon if you:
 
@@ -11,7 +14,6 @@ Use this addon if you:
 Whatever else you may be able to force this component to do is coincidental.
 
 ## Compatibility
-
 
 * Ember.js v3.24 or above
 * Ember CLI v3.24 or above
