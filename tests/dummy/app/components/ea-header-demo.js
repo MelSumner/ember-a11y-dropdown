@@ -15,11 +15,7 @@ export default class EaHeaderDemoComponent extends Component {
       type: 'separator',
     },
     {
-      type: 'button',
-      text: 'Button Text',
-    },
-    {
-      text: 'Hi Melanie how are you today?',
+      text: 'User: melsumner',
     },
   ];
 }
