@@ -2,14 +2,15 @@
 
 **Note: this is not to replace a `<select>` element in a form.**
 
-This is an accessible dropdown that you can use in your Ember app for something like a menu dropdown-- or [disclosure navigation menu])https://www.w3.org/TR/wai-aria-practices-1.2/examples/disclosure/disclosure-navigation.html)
+This is a very simple, accessible dropdown that you can use in your Ember app for something like a menu dropdown-- or [disclosure navigation menu])https://www.w3.org/TR/wai-aria-practices-1.2/examples/disclosure/disclosure-navigation.html)
 
-It's pretty narrow in scope, and there are other addons that do fancier things. 
+It's pretty narrow in scope, and there are other addons that do fancier things.
 
 Use this addon if you:
 
 * want to stop using a `details` element (which is an interactive element so cannot contain other interactive elements)
 * need a dropdown menu to put in the header or nav of your site (like a user menu)
+* are okay with styling the CSS in your app's stylesheets
 
 Whatever else you may be able to force this component to do is coincidental.
 

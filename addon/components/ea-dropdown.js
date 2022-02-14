@@ -66,5 +66,4 @@ export default class EaDropdownComponent extends Component {
   }
 }
 
-//TODD add button support
 //TODO add tests
