@@ -1,5 +1,5 @@
 {{!-- template-lint-disable no-invalid-interactive --}}
-<div class="ea-dropdown" {{on 'keyup' this.handleKeyUp}}> 
+<div class="ea-dropdown" ...attributes> 
     <button
       type="button"
       class="ea-dropdown__button"
@@ -36,7 +36,6 @@
               {{#if listItem.route}}
                 <li class="ea-dropdown__list-item">
                   <LinkTo
-                    @disabled={{@disabled}}
                     @route={{listItem.route}}
                     class="ea-dropdown__list-item--link"
                   >

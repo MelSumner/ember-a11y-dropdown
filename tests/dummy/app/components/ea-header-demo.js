@@ -12,6 +12,10 @@ export default class EaHeaderDemoComponent extends Component {
       text: 'Alpha Page',
     },
     {
+      route: 'bravo',
+      text: 'Bravo Page',
+    },
+    {
       type: 'separator',
     },
     {
