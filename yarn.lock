@@ -1022,13 +1022,12 @@
     ember-cli-version-checker "^5.1.2"
     semver "^7.3.5"
 
-"@embroider/addon-shim@^0.49.0":
-  version "0.49.0"
-  resolved "https://registry.yarnpkg.com/@embroider/addon-shim/-/addon-shim-0.49.0.tgz#96f9262c8e243a4a6e3032e2f4d8735b1b8fc343"
-  integrity sha512-J7WNrC8NvNfSrb1wUzANO7PtRzeINRTdQDRqD0mzFHCxgkRmI8r1qYrL/+LA6H2J+2XGVnQuevbpJTO1LE4jQQ==
+"@embroider/addon-shim@^1.0.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@embroider/addon-shim/-/addon-shim-1.6.0.tgz#d2d6d1d820605a48273a123a9adb49e163c8de1c"
+  integrity sha512-wHXsBsDsKxF6Ftnh67SBzV0OvwCBCBlgN5IVm661ByEdDacwWzYywFpVNcNJpCUttEJPMrqB5MJK7xf/xEqihg==
   dependencies:
-    "@embroider/shared-internals" "^0.49.0"
-    ember-auto-import "^2.2.0"
+    "@embroider/shared-internals" "^1.6.0"
     semver "^7.3.5"
 
 "@embroider/core@0.33.0", "@embroider/core@^0.33.0":
@@ -1098,14 +1097,15 @@
     semver "^7.3.2"
     typescript-memoize "^1.0.0-alpha.3"
 
-"@embroider/shared-internals@^0.49.0":
-  version "0.49.0"
-  resolved "https://registry.yarnpkg.com/@embroider/shared-internals/-/shared-internals-0.49.0.tgz#c9e179b33b3e036b064e72b69639e48d53984229"
-  integrity sha512-uCDB2rw45xinctS5JOTsl7DF6yxlMc3RlZF/jkNeiGUrphCr0T1CMnUSnQvDAWkdMjvTuOEIWFb/e56h2NBWvw==
+"@embroider/shared-internals@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@embroider/shared-internals/-/shared-internals-1.6.0.tgz#35ade2ce1202e529107bf6d1fae4ca753f6ebe5a"
+  integrity sha512-es7+pV2S9+tgX5T4losppheXfa+xWtKD6x0gq7mxqA4DIdE14mORNeSWM8/Fu9f/t0tJnPqttddbgnDYw+SvrA==
   dependencies:
     babel-import-util "^1.1.0"
     ember-rfc176-data "^0.3.17"
     fs-extra "^9.1.0"
+    js-string-escape "^1.0.1"
     lodash "^4.17.21"
     resolve-package-path "^4.0.1"
     semver "^7.3.5"
@@ -4620,7 +4620,7 @@ ember-a11y-refocus@2.1.0:
     ember-cli-babel "^7.26.3"
     ember-cli-htmlbars "^5.7.1"
 
-ember-auto-import@2.2.4, ember-auto-import@^2.2.0, ember-auto-import@^2.2.4:
+ember-auto-import@2.2.4, ember-auto-import@^2.2.0:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/ember-auto-import/-/ember-auto-import-2.2.4.tgz#68c08cb0b7533293024c97387fc449b00561185a"
   integrity sha512-iXHH+bSMP/uWvJmIhjt+PZz4ymqOLccIxZUouVcUFLKA5EAWE7gamlA684m0pIbSE/V9zKpOul4OfIgKXFprBg==
@@ -5046,13 +5046,12 @@ ember-export-application-global@2.0.1:
   resolved "https://registry.yarnpkg.com/ember-export-application-global/-/ember-export-application-global-2.0.1.tgz#b120a70e322ab208defc9e2daebe8d0dfc2dcd46"
   integrity sha512-B7wiurPgsxsSGzJuPFkpBWnaeuCu2PGpG2BjyrfA1VcL7//o+5RSnZqiCEY326y7qmxb2GoCgo0ft03KBU0rRw==
 
-ember-focus-trap@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ember-focus-trap/-/ember-focus-trap-1.0.0.tgz#13a6447d73f545da37d5b4a8fdf031d475a915c9"
-  integrity sha512-UurkJyw+/h6E9n6Wdu4m7ayfU5E6sF4fPTTKDwWhoi/u6UTY+5UjjYmZu4lQZ9oe6wbk8FJZBKSEeK8xOqqMig==
+ember-focus-trap@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ember-focus-trap/-/ember-focus-trap-1.0.1.tgz#a99565f6ce55d500b92a0965e79e3ad04219f157"
+  integrity sha512-ZUyq5ZkIuXp+ng9rCMkqBh36/V95PltL7iljStkma4+651xlAy3Z84L9WOu/uOJyVpNUxii8RJBbAySHV6c+RQ==
   dependencies:
-    "@embroider/addon-shim" "^0.49.0"
-    ember-auto-import "^2.2.4"
+    "@embroider/addon-shim" "^1.0.0"
     focus-trap "^6.7.1"
 
 ember-load-initializers@2.1.2:
@@ -7296,13 +7295,6 @@ is-ci@^2.0.0:
   dependencies:
     ci-info "^2.0.0"
 
-is-core-module@^2.2.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.8.0.tgz#0321336c3d0925e497fd97f5d95cb114a5ccd548"
-  integrity sha512-vd15qHsaqrRL7dtH6QNuy0ndJmRDrS9HAM1CAiSifNUFv4x1a0CCVsj18hJ1mShxIG6T2i1sO78MkP56r0nYRw==
-  dependencies:
-    has "^1.0.3"
-
 is-core-module@^2.8.0:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.8.1.tgz#f59fdfca701d5879d0a6b100a40aa1560ce27211"
@@ -9431,7 +9423,7 @@ path-key@^3.0.0, path-key@^3.1.0:
   resolved "https://registry.yarnpkg.com/path-key/-/path-key-3.1.1.tgz#581f6ade658cbba65a0d3380de7753295054f375"
   integrity sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==
 
-path-parse@^1.0.6, path-parse@^1.0.7:
+path-parse@^1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
   integrity sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==
@@ -9795,14 +9787,7 @@ qs@6.9.6:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.6.tgz#26ed3c8243a431b2924aca84cc90471f35d5a0ee"
   integrity sha512-TIRk4aqYLNoJUbd+g2lEdz5kLWIuTMRagAXxl78Q0RiVjAOugHmeKNGdd3cwo/ktpf9aL9epCfFqWDEKysUlLQ==
 
-qs@^6.4.0:
-  version "6.10.2"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.10.2.tgz#c1431bea37fc5b24c5bdbafa20f16bdf2a4b9ffe"
-  integrity sha512-mSIdjzqznWgfd4pMii7sHtaYF8rx8861hBO80SraY5GT0XQibWZWJSid0avzHGkDIZLImux2S5mXO0Hfct2QCw==
-  dependencies:
-    side-channel "^1.0.4"
-
-qs@^6.9.4:
+qs@^6.4.0, qs@^6.9.4:
   version "6.10.3"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.10.3.tgz#d6cde1b2ffca87b5aa57889816c5f81535e22e8e"
   integrity sha512-wr7M2E0OFRfIfJZjKGieI8lBKb7fRCH4Fv5KNPEs7gJ8jadvotdsS08PzOKR7opXhZ/Xkjtt3WF9g38drmyRqQ==
@@ -10260,7 +10245,7 @@ resolve-url@^0.2.1:
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
   integrity sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
 
-resolve@^1.1.6:
+resolve@^1.1.6, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.11.1, resolve@^1.12.0, resolve@^1.13.1, resolve@^1.14.2, resolve@^1.17.0, resolve@^1.20.0, resolve@^1.4.0, resolve@^1.5.0, resolve@^1.8.1:
   version "1.21.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.21.0.tgz#b51adc97f3472e6a5cf4444d34bc9d6b9037591f"
   integrity sha512-3wCbTpk5WJlyE4mSOtDLhqQmGFi0/TD9VPwmiolnk8U0wRgMEktqCXd3vy5buTO3tljvalNvKrjHEfrd2WpEKA==
@@ -10268,14 +10253,6 @@ resolve@^1.1.6:
     is-core-module "^2.8.0"
     path-parse "^1.0.7"
     supports-preserve-symlinks-flag "^1.0.0"
-
-resolve@^1.10.0, resolve@^1.10.1, resolve@^1.11.1, resolve@^1.12.0, resolve@^1.13.1, resolve@^1.14.2, resolve@^1.17.0, resolve@^1.20.0, resolve@^1.4.0, resolve@^1.5.0, resolve@^1.8.1:
-  version "1.20.0"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.20.0.tgz#629a013fb3f70755d6f0b7935cc1c2c5378b1975"
-  integrity sha512-wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A==
-  dependencies:
-    is-core-module "^2.2.0"
-    path-parse "^1.0.6"
 
 responselike@^1.0.2:
   version "1.0.2"
